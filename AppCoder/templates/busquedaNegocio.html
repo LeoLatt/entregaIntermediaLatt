@@ -1,0 +1,22 @@
+{% extends "padre.html" %}
+
+{% load static %}
+
+{% block titulo %}
+<h1 class="mb-5">Formulario de busqueda de negocios</h1>
+{% endblock %}
+
+{% block contenido_que_cambia %}
+
+<form action="{% url 'buscar' %}" method="GET"> 
+
+    <input type="number" name="cuit" id="cuit">
+
+    <input type="submit" value="buscar cuit">
+
+
+</form>
+{{ mensaje }}
+
+
+{% endblock %}

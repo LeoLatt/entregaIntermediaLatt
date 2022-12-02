@@ -1,0 +1,46 @@
+{% extends "padre.html" %}
+
+{% load static %}
+
+
+{% block titulo %}
+<h1 class="mb-5">RESULTADOS DE LA BUSQUEDA</h1>
+
+
+{% if negocio %}
+<ul>
+    {% for negocios in negocio %}
+        <li>Nombre: {{negocios.nombre}}</li>
+        <li>Cuit: {{negocios.cuit}}</li>
+        <br>
+    {% endfor %}
+</ul>
+
+{% else %}
+
+<p> NO HAY NEGOCIOS CON ESE CUIT!</p>
+
+{% endif %}
+
+{% endblock %}
+
+
+{% block contenido_que_cambia %}
+
+{% if negocio %}
+<ul>
+    {% for negocios in negocio %}
+        <li>{{negocios.nombre}}</li>
+        <li>{{negocios.cuit}}</li>
+    
+        <br>
+    {% endfor %}
+</ul>
+
+{% else %}
+
+<p> NO HAY NEGOCIOS CON ESE CUIT</p>
+
+{% endif %}
+
+{% endblock %}
