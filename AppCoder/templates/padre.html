@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html><!--primero fue el html del template que bajamos, despues fue inicio y con herencia ahora padre-->
 <html lang="en">
     <head>
 
@@ -22,7 +22,7 @@
         <!-- Navigation-->
         <nav class="navbar navbar-light bg-light static-top">
             <div class="container">
-                <a class="navbar-brand" href="{% url 'inicio' %}">Sistema 34640</a>
+                <a class="navbar-brand" href="{% url 'inicio' %}">Lattenero 22</a> <!-- llama a la url de nombre inicio con el boton, tercer campo-->
                 <a class="btn btn-primary" href="{% url 'empleados' %}">Empleados</a>
                 <a class="btn btn-primary" href="{% url 'productoFormulario' %}">Productos</a>
                 <a class="btn btn-primary" href="{% url 'negocioFormulario' %}">Negocios</a>
@@ -90,7 +90,7 @@
         <section class="showcase">
             <div class="container-fluid p-0">
                 <div class="row g-0">
-                    <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('assets/img/bg-showcase-1.jpg')"></div>
+                    <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('{{ STATIC_URL }}assets/img/bg-masthead.jpg')"></div>
                     <div class="col-lg-6 order-lg-1 my-auto showcase-text">
                         <h2>Fully Responsive Design</h2>
                         <p class="lead mb-0">When you use a theme created by Start Bootstrap, you know that the theme will look great on any device, whether it's a phone, tablet, or desktop the page will behave responsively!</p>

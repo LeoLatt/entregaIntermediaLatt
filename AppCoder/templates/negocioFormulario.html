@@ -6,7 +6,7 @@
 <h1 class="mb-5">FORMULARIO DEL NEGOCIO</h1>
 {% endblock %}
 
-{% block contenido_que_cambia %}
+{% block contenido_que_cambia %}<!--rellena en padre el bloque contenido que cambia con lo que esta abajo-->
 <h1>FORMULARIO</h1>
 
 <form action="{% url 'negocioFormulario' %}" method="POST"> {% csrf_token %}

@@ -7,17 +7,22 @@ from django.http import HttpResponse
 
 
 # Create your views here.
+def vistaInicio(request):
+    return HttpResponse("Pagina de Inicio")
+
+
 def inicio(request):
     
     return render (request, "inicio.html")
 
 
 def negocio(request):
+    print("Inicio de la funcion negocio")
 
     negocio1=Negocio(nombre="HelthyFood",cuit=20111201302) #creo un objeto negocio
     
-    negocio.save() #guardo la funcion
-
+    negocio.save() #guardo el negocio creado
+    print("se guardo el negocio en la DB")
     cadena_Texto="Negocio guardado: "+negocio.nombre+" "+str(negocio.cuit)
     return HttpResponse(cadena_Texto)
 
@@ -106,7 +111,7 @@ def buscar(request):
 
         cuit=request.GET["cuit"]
 
-        negocios=Negocio.objects.filter(cuit__icontains=cuit)
+        negocios=Negocio.objects.filter(cuit__iexact=cuit) #icontains: contiene
         return render(request,"resultadosBusqueda.html", {"negocio":negocios} )
     else:
         return render(request, "busquedaNegocio.html", {"mensaje":"Ingrese un CUIT"})

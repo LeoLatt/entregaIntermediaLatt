@@ -1,12 +1,12 @@
 
-    {% extends "padre.html" %}
+    {% extends "padre.html" %} <!--ahora inicio sos hijo de template padre "extends" lo hace heredar MIN.28.C20-->
 
-    {% load static %}
+    {% load static %} <!--siempre se cargan los estaticos-->
 
-    {% block titulo %}
-    <h1 class="mb-5">NEGOCIOS LATTENERO</h1>
+    {% block titulo %}<!--adentro de donde tu papa (padre) tiene el 'bloque titulo'(block titulo) -->
+    <h1 class="mb-5">NEGOCIOS LATTENERO</h1><!--busca el bloque titulo en padre y pone ese mensaje-->
     <h1>{{ mensaje }}</h1> <!--viene del return de la view-->
-    {% endblock %}
+    {% endblock %}<!--fin de bloque-->
 
     
 

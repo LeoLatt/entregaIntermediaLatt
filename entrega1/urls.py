@@ -20,5 +20,6 @@ from AppCoder.views import *
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("AppCoder/", include("AppCoder.urls")),
+    path("", vistaInicio,name="inicio"),
+    path("AppCoder/", include("AppCoder.urls")), # inclui todas las urls que tenga la AppCoder
 ]

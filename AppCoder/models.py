@@ -22,4 +22,4 @@ class Producto(models.Model):
     vencimiento= models.DateField()
 
     def __str__(self):
-        return self.categoria+" "+str(self.Precio)
+        return self.categoria+" "+str(self.precio)+" "+str(self.vencimiento)
